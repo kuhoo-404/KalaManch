@@ -1,7 +1,13 @@
+"use client";
+
 import { Button } from "@/components/ui/button"
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { ArrowRight, Palette, MessageSquare, TrendingUp, Globe, Sparkles, Users } from "lucide-react"
+
+import PhoneAuth from "../components/auth/PhoneAuth";
+import GoogleLoginButton from "../components/auth/GoogleAuth";
+import VoiceRecorder from "@/components/VoiceRecorder";
 
 export default function HomePage() {
   return (
@@ -148,7 +154,15 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
+      <main className="p-8">
+        <h1 className="text-2xl font-bold mb-4">Voice to Text Demo</h1>
+        <VoiceRecorder />
+      </main>
+      <div className="min-h-screen flex flex-col items-center justify-center gap-8">
+        <h1 className="text-2xl font-bold">Artisan Auth Demo</h1>
+        <PhoneAuth />
+        <GoogleLoginButton />
+      </div>
       {/* How It Works Section */}
       <section id="how-it-works" className="py-20 px-4">
         <div className="container mx-auto">
